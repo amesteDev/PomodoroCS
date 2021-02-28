@@ -1,0 +1,29 @@
+[{
+        "LengthOfWork": 1,
+        "LengthOfBreak": 1,
+        "Date": "2021-01-19T16:24:27.1309994+01:00",
+        "Title": "testar",
+        "Score": 10
+    },
+    {
+        "LengthOfWork": 1,
+        "LengthOfBreak": 1,
+        "Date": "2021-01-04T11:24:27.1309994+01:00",
+        "Title": "testar",
+        "Score": 7
+    },
+    {
+        "LengthOfWork": 1,
+        "LengthOfBreak": 1,
+        "Date": "2021-01-12T12:24:27.1309994+01:00",
+        "Title": "testar",
+        "Score": 6
+    },
+    {
+        "LengthOfWork": 1,
+        "LengthOfBreak": 1,
+        "Date": "2021-01-01T09:24:27.1309994+01:00",
+        "Title": "testar",
+        "Score": 9
+    }
+]

@@ -1,0 +1,16 @@
+C:\Users\am3st\OneDrive\Skrivbord\CS\projekt\bin\Debug\net5.0\projekt.exe
+C:\Users\am3st\OneDrive\Skrivbord\CS\projekt\bin\Debug\net5.0\projekt.deps.json
+C:\Users\am3st\OneDrive\Skrivbord\CS\projekt\bin\Debug\net5.0\projekt.runtimeconfig.json
+C:\Users\am3st\OneDrive\Skrivbord\CS\projekt\bin\Debug\net5.0\projekt.runtimeconfig.dev.json
+C:\Users\am3st\OneDrive\Skrivbord\CS\projekt\bin\Debug\net5.0\projekt.dll
+C:\Users\am3st\OneDrive\Skrivbord\CS\projekt\bin\Debug\net5.0\ref\projekt.dll
+C:\Users\am3st\OneDrive\Skrivbord\CS\projekt\bin\Debug\net5.0\projekt.pdb
+C:\Users\am3st\OneDrive\Skrivbord\CS\projekt\obj\Debug\net5.0\projekt.csprojAssemblyReference.cache
+C:\Users\am3st\OneDrive\Skrivbord\CS\projekt\obj\Debug\net5.0\projekt.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\am3st\OneDrive\Skrivbord\CS\projekt\obj\Debug\net5.0\projekt.AssemblyInfoInputs.cache
+C:\Users\am3st\OneDrive\Skrivbord\CS\projekt\obj\Debug\net5.0\projekt.AssemblyInfo.cs
+C:\Users\am3st\OneDrive\Skrivbord\CS\projekt\obj\Debug\net5.0\projekt.csproj.CoreCompileInputs.cache
+C:\Users\am3st\OneDrive\Skrivbord\CS\projekt\obj\Debug\net5.0\projekt.dll
+C:\Users\am3st\OneDrive\Skrivbord\CS\projekt\obj\Debug\net5.0\ref\projekt.dll
+C:\Users\am3st\OneDrive\Skrivbord\CS\projekt\obj\Debug\net5.0\projekt.pdb
+C:\Users\am3st\OneDrive\Skrivbord\CS\projekt\obj\Debug\net5.0\projekt.genruntimeconfig.cache
