@@ -17,10 +17,12 @@ namespace pomo
 
 		static void Main(string[] args)
 		{
+			//setup DateTime for use in the app.
 			DateTime localdate = DateTime.Now;
 			int i = 0;
 			while (true)
 			{
+				//simple menu-system, same approach used throughout the app with switch-statements.
 				Console.CursorVisible = false;
 				Console.Clear();
 				Console.WriteLine("Välkommen, gör val enligt nedan");
@@ -42,6 +44,7 @@ namespace pomo
 						{
 							Console.WriteLine("How long should the workperiods be? (20-30 minutes) \n");
 							string sessionLength = Console.ReadLine().ToLower();
+							//TryParse to make sure that there are numbers entered.
 							isNumber = Int32.TryParse(sessionLength, out number);
 							if (isNumber && number >= 20 && number <= 30)
 							{
@@ -86,6 +89,7 @@ namespace pomo
 						break;
 					case "2":
 						Console.Clear();
+						//new isntance of the Pomos class.
 						Pomos pom = new Pomos();
 
 						Console.WriteLine("Totalt antal genomförda pomodoros: " + pom.GetPoms().Count);
@@ -96,7 +100,6 @@ namespace pomo
 						Console.WriteLine("1: Last week\n");
 						Console.WriteLine("2: Last month\n");
 						Console.WriteLine("3: All time\n");
-						Console.WriteLine("4: Stats for most productive etc\n");
 						Console.WriteLine("q: Back to main menu\n");
 						string inp = Console.ReadLine().ToLower();
 						switch (inp)
@@ -104,6 +107,7 @@ namespace pomo
 							case "1":
 
 								Console.WriteLine("Last week: ");
+								//loop out every Pomodor-object that is stored in the JSON.Based on the date it was stored with. (last 7 days)
 								foreach (Pomodoro poms in pom.GetPoms())
 								{
 									if ((localdate - poms.Date).TotalDays < 7)
@@ -117,6 +121,7 @@ namespace pomo
 							case "2":
 
 								Console.WriteLine("Last month: ");
+								//loop out every Pomodor-object that is stored in the JSON. Based on the date it was stored with. (last 30 days)
 								foreach (Pomodoro poms in pom.GetPoms())
 								{
 									if ((localdate - poms.Date).TotalDays < 30)
@@ -128,12 +133,12 @@ namespace pomo
 								Console.ReadLine().ToLower();
 								break;
 							case "3":
+							//loop out ALL Pomodoro-object that is stored in the JSON.
 								foreach (Pomodoro poms in pom.GetPoms())
 								{
 									Console.WriteLine("[" + i++ + "] Datum: " + poms.Date + " Score: " + poms.Score + poms.LengthOfWork + " - " + poms.LengthOfBreak);
 								}
-								Console.WriteLine("q: Stäng applikationen\n");
-								Console.WriteLine("q: Press any key to return \n");
+								Console.WriteLine("Press any key to return \n");
 								Console.ReadLine().ToLower();
 								break;
 						}
@@ -148,6 +153,7 @@ namespace pomo
 
 		static void startWorking(Pomodoro inPom)
 		{
+			//this is the code for the actual timer.
 			Console.Clear();
 			Stopwatch stopWatch = new Stopwatch();
 			int pomoCount = 0;
@@ -155,6 +161,7 @@ namespace pomo
 			stopWatch.Start();
 			while (pomoCount < 4)
 			{
+				//timespan/stopwatch used here to time working and break-timers
 				TimeSpan ts = stopWatch.Elapsed;
 				if (!onBreak)
 				{
@@ -162,6 +169,7 @@ namespace pomo
 					string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}",
 					ts.Hours, ts.Minutes, ts.Seconds + 1);
 					Console.Write("\rArbetad tid: " + elapsedTime);
+					//sleep for 1 second and then check if the time elapsed matches the time specified by the user. same approach used for both work-sprints and rest-periods.
 					Thread.Sleep(1000);
 					if (stopWatch.Elapsed.TotalMilliseconds > inPom.LengthOfWork * 1000)
 					{
@@ -203,6 +211,7 @@ namespace pomo
 			int number;
 			do
 			{
+				//allows the user to grade the completed pomodor-session.
 				Console.WriteLine("What is the score for this sprint of work? (1-10)\n");
 				string score = Console.ReadLine().ToLower();
 				isNumber = Int32.TryParse(score, out number);
@@ -216,6 +225,7 @@ namespace pomo
 					Console.WriteLine("Du måste ange ett tal mellan 1 och 10! \n");
 				}
 			} while (!isNumber);
+			//prompts the user to save the information.
 			Console.WriteLine("Ok to save this? Y/n");
 			Console.WriteLine(inPom.LengthOfWork + " " + inPom.LengthOfBreak + " " + inPom.Date + " " + inPom.Title + " " + inPom.Score);
 			bool waiting = true;
