@@ -171,7 +171,7 @@ namespace pomo
 					Console.Write("\rArbetad tid: " + elapsedTime);
 					//sleep for 1 second and then check if the time elapsed matches the time specified by the user. same approach used for both work-sprints and rest-periods.
 					Thread.Sleep(1000);
-					if (stopWatch.Elapsed.TotalMilliseconds > inPom.LengthOfWork * 1000)
+					if (stopWatch.Elapsed.TotalMilliseconds > inPom.LengthOfWork * 10000)
 					{
 						pomoCount++;
 						Console.Clear();
@@ -188,7 +188,7 @@ namespace pomo
 					ts.Hours, ts.Minutes, ts.Seconds + 1);
 					Console.Write("\rRastad tid: " + elapsedTime);
 					Thread.Sleep(1000);
-					if (stopWatch.Elapsed.TotalMilliseconds > inPom.LengthOfBreak * 1000)
+					if (stopWatch.Elapsed.TotalMilliseconds > inPom.LengthOfBreak * 10000)
 					{
 						Console.Clear();
 						Console.Beep();
