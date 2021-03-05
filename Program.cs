@@ -66,7 +66,7 @@ namespace pomo
 							Console.WriteLine("Viloperioderna? (3-5 minuter) \n");
 							string restLength = Console.ReadLine().ToLower();
 							isNumber = Int32.TryParse(restLength, out number);
-							if (isNumber && number >= 1 && number <= 5)
+							if (isNumber && number >= 3 && number <= 5)
 							{
 								pomo.LengthOfBreak = number;
 								pomo.Date = localdate;
@@ -112,7 +112,7 @@ namespace pomo
 								{
 									if ((localdate - poms.Date).TotalDays < 7)
 									{
-										Console.WriteLine("[" + i++ + "] Datum: " + poms.Date + " Score: " + poms.Score + poms.LengthOfWork + " - " + poms.LengthOfBreak);
+										Console.WriteLine("[" + i++ + "] Titel: " + poms.Title + " Datum: " + poms.Date + " Score: " + poms.Score + ". Längd på arbetstid-paustid: " + poms.LengthOfWork + " - " + poms.LengthOfBreak);
 									}
 								}
 								Console.WriteLine("q: Press any key to return \n");
@@ -126,7 +126,7 @@ namespace pomo
 								{
 									if ((localdate - poms.Date).TotalDays < 30)
 									{
-										Console.WriteLine("[" + i++ + "] Datum: " + poms.Date + " Score: " + poms.Score + poms.LengthOfWork + " - " + poms.LengthOfBreak);
+										Console.WriteLine("[" + i++ + "] Titel: " + poms.Title + " Datum: "  + poms.Date + " Score: " + poms.Score + ". Längd på arbetstid-paustid: " + poms.LengthOfWork + " - " + poms.LengthOfBreak);
 									}
 								}
 								Console.WriteLine("q: Press any key to return \n");
@@ -136,7 +136,7 @@ namespace pomo
 							//loop out ALL Pomodoro-object that is stored in the JSON.
 								foreach (Pomodoro poms in pom.GetPoms())
 								{
-									Console.WriteLine("[" + i++ + "] Datum: " + poms.Date + " Score: " + poms.Score + poms.LengthOfWork + " - " + poms.LengthOfBreak);
+									Console.WriteLine("[" + i++ + "]  Titel: " + poms.Title + " Datum: "  + poms.Date + " Score: " + poms.Score + ". Längd på arbetstid-paustid: " + poms.LengthOfWork + " - " + poms.LengthOfBreak);
 								}
 								Console.WriteLine("Press any key to return \n");
 								Console.ReadLine().ToLower();

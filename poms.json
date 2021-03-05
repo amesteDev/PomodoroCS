@@ -1,29 +1,42 @@
-[{
-        "LengthOfWork": 1,
-        "LengthOfBreak": 1,
-        "Date": "2021-01-19T16:24:27.1309994+01:00",
-        "Title": "testar",
-        "Score": 10
-    },
-    {
-        "LengthOfWork": 1,
-        "LengthOfBreak": 1,
-        "Date": "2021-01-04T11:24:27.1309994+01:00",
-        "Title": "testar",
-        "Score": 7
-    },
-    {
-        "LengthOfWork": 1,
-        "LengthOfBreak": 1,
-        "Date": "2021-01-12T12:24:27.1309994+01:00",
-        "Title": "testar",
-        "Score": 6
-    },
-    {
-        "LengthOfWork": 1,
-        "LengthOfBreak": 1,
-        "Date": "2021-01-01T09:24:27.1309994+01:00",
-        "Title": "testar",
-        "Score": 9
-    }
+[
+  {
+    "Id": 0,
+    "LengthOfWork": 1,
+    "LengthOfBreak": 1,
+    "Date": "2021-02-28T16:24:27.1309994+01:00",
+    "Title": "Koda C#",
+    "Score": 10
+  },
+  {
+    "Id": 0,
+    "LengthOfWork": 1,
+    "LengthOfBreak": 1,
+    "Date": "2021-03-01T11:24:27.1309994+01:00",
+    "Title": "JavaScript p\u00E5 Codewars",
+    "Score": 7
+  },
+  {
+    "Id": 0,
+    "LengthOfWork": 1,
+    "LengthOfBreak": 1,
+    "Date": "2021-02-12T12:24:27.1309994+01:00",
+    "Title": "Portfoliokod",
+    "Score": 6
+  },
+  {
+    "Id": 0,
+    "LengthOfWork": 1,
+    "LengthOfBreak": 1,
+    "Date": "2021-01-08T09:24:27.1309994+01:00",
+    "Title": "Adminarbete",
+    "Score": 9
+  },
+  {
+    "Id": 0,
+    "LengthOfWork": 3,
+    "LengthOfBreak": 2,
+    "Date": "2021-03-05T09:51:56.1243444+01:00",
+    "Title": "c# presentation",
+    "Score": 7
+  }
 ]
